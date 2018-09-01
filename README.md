@@ -1,2 +1,2 @@
 # psgg-php-sample
-SYN-G-GEN PHP Sample
+Project SYN-G-GEN PHP Sample
