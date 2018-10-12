@@ -15,8 +15,9 @@
     $sm->Start();
 
     while($sm->IsEnd()==FALSE) {
-        $sm->Update();
+        $sm->Update();        
     }
+
 ?> </p>
 </body>
 </html>
