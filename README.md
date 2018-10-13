@@ -2,12 +2,14 @@
 
 # ENVIRONMENT
 
-Windows
-Xamp
+Windows  
+Xamp  
+SYN-G-GEN http://syn-g-gen.com
 
 # INSTRUCTION
   
 1. Goto 'playground'  
+   If a statemchine exists, run clean.bat
 2. Start SYN-G-GEN  
 3. Select New State Machine.  
 4. Set TestControl as state machine name.  
