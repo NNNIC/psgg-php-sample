@@ -1,16 +1,18 @@
 # psgg-php-sample
 
+StateGo php sample
+
 # ENVIRONMENT
 
 Windows  
 Xamp  
-SYN-G-GEN http://syn-g-gen.com
+StateGo https://statego.programanic.com
 
 # INSTRUCTION
   
 1. Goto 'playground'  
    If a statemchine exists, run clean.bat
-2. Start SYN-G-GEN  
+2. Start StateGo  
 3. Select New State Machine.  
 4. Set TestControl as state machine name.  
 5. Set full path of "playground\doc" as doc folder.  
