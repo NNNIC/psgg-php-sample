@@ -6,7 +6,7 @@ StateGo php sample
 
 Windows  
 Xamp  
-StateGo https://statego.programanic.com
+[StateGo](https://statego.programanic.com/index-e.html)
 
 # INSTRUCTION
   
