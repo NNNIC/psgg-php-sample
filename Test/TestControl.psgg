@@ -12,8 +12,8 @@ check_excel_writable=no
 ------#======*<Guid(D13821FE-FA27-4B04-834C-CEC1E5670F48)>*======#------
 
 sheet=state-chart
-nameid_list=,n001,n002,n003,n004,n01a,n005,n006,n01b,,n01c,n01d,n01e,n007,,n008,,n009,n00a,n00b,n00c,,n00d,n00e,,n00f,n010,,n011,n012,,n013,n014,n015,n016,,n017,n018,n019,,,
-stateid_list=,,,,,,,,s0004,s0005,s0006,s0007,s0008,s0009,s000a,s000b,s000c,s000d,s000e,s0010,s000f,s0012,s0011,s0013,s0014
+nameid_list=,n001,n002,n003,n004,n01a,n005,n006,n01b,,n008,,n01c,n01d,n01e,n007,,,n009,n00a,n00b,n00c,,n00d,n00e,,n00f,n010,,n011,n012,,n013,n014,n015,n016,,n017,n018,n019,,,,
+stateid_list=,,,,,,,,,,,,,,,s000b,s000c,,,s0010,s000f,s0012,s0011,s0013,s0014
 max_name_id=30
 max_state_id=20
 [id_name_dic]
@@ -50,17 +50,8 @@ n01e=loop_next
 
 
 [id_state_dic]
-s0004=S_0002
-s0005=S_0003
-s0006=S_0004
-s0007=S_0005
-s0008=E_0005
-s0009=S_0007
-s000a=C_0005
 s000b=S_END
 s000c=S_START
-s000d=S_0006
-s000e=S_0001
 s000f=S_GSB000
 s0010=S_SBS000
 s0011=S_0008
@@ -68,102 +59,6 @@ s0012=S_RET000
 s0013=S_GSB001
 s0014=S_LOP000
 
-
-[s0004]
-n002=S_0002
-n006=S_END
-n00a=echo '$a=1<br>';
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=744,1003
-n019=1
-
-[s0005]
-n002=S_0003
-n006=S_END
-n00a=echo '$a=2<br>';
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=744,1122
-n019=2
-
-[s0006]
-n002=S_0004
-n006=S_0006
-n00a=echo '$a>2<br>';
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=744,1253
-n019=3
-
-[s0007]
-n002=S_0005
-n006=S_END
-n00a=echo 'YES<br>';
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=888,1402
-n019=4
-
-[s0008]
-n002=E_0005
-n007=@@@
-function hoge($a1)
-{
-    echo "Hoge<br>";
-    return $a1 *  2;
-}
-@@@
-
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=282,90
-n019=5
-
-[s0009]
-n002=S_0007
-n006=S_END
-n00a=echo 'NO<br>';
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=889,1497
-n019=6
-
-[s000a]
-n002=C_0005
-n003='hoge' function makes twice times value.
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=280,9
-n019=7
 
 [s000b]
 n002=S_END
@@ -174,7 +69,7 @@ n017=@@@
 The root
 @@@
 
-n018=1195,1140
+n018=882,112
 n019=8
 
 [s000c]
@@ -190,53 +85,6 @@ The root
 n018=63,112
 n019=9
 
-[s000d]
-n002=S_0006
-n00a=$this->m_bYesNo = FALSE;
-n013=@@@
-br_YES(S_0005);
-br_NO(S_0007);
-@@@
-
-n015=@@@
-?
-?
-@@@
-
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=594,1404
-n019=10
-
-[s000e]
-n002=S_0001
-n003=new state
-n00a=$a= $this->hoge(2);
-n013=@@@
-brifc(S_0002);
-brelseifc(S_0003);
-brelse(S_0004);
-@@@
-
-n015=@@@
-$a==1
-$a==2
-?
-@@@
-
-n017=@@@
-/
-(100,100)
-The root
-@@@
-
-n018=475,1016
-n019=11
-
 [s000f]
 n002=S_GSB000
 n01a=gosub
@@ -248,7 +96,7 @@ n017=@@@
 The root
 @@@
 
-n018=355,281
+n018=295,112
 n019=12
 
 [s0010]
@@ -261,7 +109,7 @@ n017=@@@
 The root
 @@@
 
-n018=623,432
+n018=630,328
 n019=13
 
 [s0011]
@@ -275,7 +123,7 @@ n017=@@@
 The root
 @@@
 
-n018=755,432
+n018=762,328
 n019=14
 
 [s0012]
@@ -287,7 +135,7 @@ n017=@@@
 The root
 @@@
 
-n018=1082,432
+n018=992,328
 n019=15
 
 [s0013]
@@ -298,28 +146,28 @@ n01b=S_SBS000
 n017=@@@
 /
 (100,100)
-
+The root
 @@@
 
-n018=545,267
+n018=461,112
 n019=16
 
 [s0014]
 n002=S_LOP000
 n01a=loop
-n006=S_END
+n006=S_GSB000
 n01b=S_SBS000
+n008=private $index = 0;
 n01c=$this->index = 0;
 n01d=$this->index < 10
 n01e=$this->index ++;
-n008=private $index = 0; 
 n017=@@@
 /
 (100,100)
-
+The root
 @@@
 
-n018=228,406
+n018=183,112
 n019=17
 
 
@@ -329,7 +177,7 @@ n019=17
 sheet=config
 
 ###VARIOUS-CONTENTS-BEGIN###
-; The setting was created automatically. 2020/07/01 23:31:10
+; The setting was created automatically. 2020/07/04 10:19:02
 ; * pssgEditor version : 0.65.5617.0737256ae72d56e87335f7bfb8f8728597b6ec64
 psggfile=@@@
 TestControl.psgg
@@ -347,7 +195,7 @@ c_thumbnail=1
 c_contents=1
 force_display_outpin=0
 last_action=@@@
-mov,S_LOP000
+init,Initilized
 @@@
 target_pathdir=@@@
 /
@@ -362,7 +210,7 @@ nodegroup_pos_list=@@@
 [{"Key":"\/","Value":{"x":100,"y":100}}]
 @@@
 fillter_state_location_list=@@@
-[{"Key":"\/","Value":[{"Key":"S_START","Value":{"x":63,"y":112}},{"Key":"S_END","Value":{"x":1195,"y":1140}},{"Key":"S_0002","Value":{"x":744,"y":1003}},{"Key":"S_0003","Value":{"x":744,"y":1122}},{"Key":"S_0004","Value":{"x":744,"y":1253}},{"Key":"S_0005","Value":{"x":888,"y":1402}},{"Key":"E_0005","Value":{"x":282,"y":90}},{"Key":"S_0007","Value":{"x":889,"y":1497}},{"Key":"C_0005","Value":{"x":280,"y":9}},{"Key":"S_0006","Value":{"x":594,"y":1404}},{"Key":"S_0001","Value":{"x":475,"y":1016}},{"Key":"S_GSB000","Value":{"x":355,"y":281}},{"Key":"S_SBS000","Value":{"x":623,"y":432}},{"Key":"S_0008","Value":{"x":755,"y":432}},{"Key":"S_RET000","Value":{"x":1082,"y":432}},{"Key":"S_GSB001","Value":{"x":545,"y":267}},{"Key":"S_LOP000","Value":{"x":227.777771,"y":405.777771}},{"Key":"E_0000","Value":{"x":251,"y":386}}]}]
+[{"Key":"\/","Value":[{"Key":"S_START","Value":{"x":63,"y":112}},{"Key":"S_END","Value":{"x":882,"y":112}},{"Key":"S_GSB000","Value":{"x":295,"y":112}},{"Key":"S_SBS000","Value":{"x":630,"y":328}},{"Key":"S_0008","Value":{"x":762,"y":328}},{"Key":"S_RET000","Value":{"x":992,"y":328}},{"Key":"S_GSB001","Value":{"x":461,"y":112}},{"Key":"S_LOP000","Value":{"x":183,"y":112}}]}]
 @@@
 linecolor_data=@@@
 [{"color":{"knownColor":0,"name":null,"state":2,"value":4285493103},"pattern":"BACKTO_"}]
