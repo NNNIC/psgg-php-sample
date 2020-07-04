@@ -18,12 +18,14 @@ You may use "FizzBuzz" too.
 
 # Sample
 
+## Test
+
 TestContro.psgg
 ![](./wiki/test2.png)
 
+## FizzBuzz
+
 FizzBuzz.psgg
-
 ![](./wiki/fizzbuzz.png)
+Output
 ![](./wiki/fizzbuzz-out.png)
-
-
