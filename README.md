@@ -27,5 +27,7 @@ TestContro.psgg
 
 FizzBuzz.psgg
 ![](./wiki/fizzbuzz.png)
+
 Output
+
 ![](./wiki/fizzbuzz-out.png)
